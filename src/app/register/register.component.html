@@ -1,0 +1,84 @@
+<div class="example-card">
+  
+  <div>
+
+    <form class="example-form">
+
+      <table class="example-full-width" cellspacing="0">
+
+        <tr>
+          <td>
+            <div class="example-full-width">
+              <input  placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="example-full-width">
+              <input  placeholder="Last Name" [(ngModel)]="user.lastName" name="lastName">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="example-full-width">
+              <input  placeholder="Email" [(ngModel)]="user.email" type="email" name="email" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="example-full-width">
+              <input  placeholder="Password" [(ngModel)]="user.password" type="password" name="password"
+                     required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="example-full-width">
+              <input  placeholder="Phone Number" [(ngModel)]="user.phoneNo" type="number" name="Phone Number"
+                     required>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>Address :</label>
+
+            <div class="example-full-width">
+              <input  placeholder="Street" [(ngModel)]="user.address.streetOne" type="text" name="streetOne" required>
+            </div>
+            <div class="example-full-width">
+              <input  placeholder="City" [(ngModel)]="user.address.city" type="text" name="City" required>
+            </div>
+            <div class="example-full-width">
+              <input  placeholder="State" [(ngModel)]="user.address.state" type="text" name="State" required>
+            </div>
+            <div class="example-full-width">
+              <input  placeholder="Country" [(ngModel)]="user.address.country" type="text" name="Country"
+                     required>
+            </div>
+            <div class="example-full-width">
+              <input  placeholder="Zipcode" [(ngModel)]="user.address.zipCode" type="text" name="Zipcode"
+                     required>
+            </div>
+
+
+          </td>
+        </tr>
+      </table>
+
+    </form>
+
+  </div>
+  <div>
+    <button btn btn-raised (click)="register()" color="primary">Register</button>
+
+    <a [routerLink]="['/login']" (click)="cancel()" class="btn btn-link " color="primary">Cancel</a>
+  </div>
+</div>
+<button btn btn-raised (click)="send()" color="primary">Register</button>
+{{childFormData | json}}

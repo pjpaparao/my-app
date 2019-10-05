@@ -1,0 +1,5 @@
+<p>
+  {{childVar | json}} --from parent
+</p>
+<input type="text" [(ngModel)]="parentVar">
+<button (click)="changeVal(parentVar)">send child to parent</button>
